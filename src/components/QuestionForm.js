@@ -13,7 +13,7 @@ const QuestionForm = () => {
         setLoading(true);
         setAnswer('');
         try {
-            const response = await axios.post('http://localhost:5001/api/question', { question });
+            const response = await axios.post('https://quesans.onrender.com/api/question', { question });
             setAnswer(response.data.answer);
         } catch (error) {
             setAnswer('An error occurred. Please try again.');
